@@ -106,7 +106,23 @@ letsDance('polka')
             
         });
 
+        async function runWebProject() {
+            try {
+                console.log(await researchTargetAudience());
+                console.log(await sketchDesign());
+                console.log(await createMockUp());
+                console.log(await codeProject());
+                console.log(await stackoverflowErrors());
+                console.log(await testProduct());
+                console.log(await celebrateProject());
+            } catch (error) {
+                console.error("Något gick fel:", error);
+            }
+        }
         
+        // Anropa async/await-funktionen
+        runWebProject();
+
     
 
 
