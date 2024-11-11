@@ -21,7 +21,7 @@ letsDance('polka')
 
 
 
-    function researchTargetAudience () {
+   /* function researchTargetAudience () {
         return new Promise ((resolve) => {
             setTimeout(() => {
                 resolve("Researcha målgruppen klart")
@@ -61,7 +61,7 @@ letsDance('polka')
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve("Testa produkten klart");
-            }, 2000); // 2s
+            }, 2000); 
         });
     }
     
@@ -69,7 +69,7 @@ letsDance('polka')
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve("Fira lyckat projekt klart");
-            }, 1000); // 1s
+            }, 1000); 
         });
     }
 
@@ -121,7 +121,73 @@ letsDance('polka')
         }
         
         // Anropa async/await-funktionen
-        runWebProject();
+        runWebProject(); */
+
+        /* Övning 3 - Skapa en funktion brewCoffee(coffeeType) som bygger på ett Promise. Om kaffetypen är "espresso", ska det godkännas med "Your espresso is ready!". Om kaffetypen är något annat, ska det avvisas med "We only serve espresso here!". Använd setTimeout för att simulera bryggtiden på 3 sekunder.
+
+        function brewCoffee(coffeeType) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                   if(coffeeType.toLowerCase() === 'espresso'){
+                    resolve ("Your espresso is ready!")
+                   } else {
+                    reject ("We only serve espresso here")
+                   }
+                },3000);
+            });
+        }
+        brewCoffee('americano')
+        .then(response => console.log(response)) 
+        .catch(diss => console.log(diss)); */
+
+        /* Övning 4 -  Skapa en kedja av Promise-funktioner för följande matlagningssteg: Förbereda ingredienser - 2s Koka upp vatten - 4s Laga maten - 5s Servera maten - 1s Testa att använda både .then() och async/await för att hantera dessa steg.
+
+        function prepIng () {
+            return new Promise ((resolve) => {
+                setTimeout(() => {
+                    resolve("Ingredienser förberedda")
+    
+                }, 2000);
+            });
+        }    
+        function boilWater () {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Redo med kokat vatten")
+                }, 4000);
+            });
+        }
+        function cookFood (){
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve ("Nu är maten lagad!")
+                }, 5000);
+            });
+        }
+        function serveFood (){
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Maten är klar och redo att ätas, varsågoda!")
+                }, 1000);
+            });
+        }
+
+        async function followRecipe() {
+            try {
+                console.log(await prepIng());
+                console.log(await boilWater());
+                console.log(await cookFood());
+                console.log(await serveFood());
+                
+            }catch (error){
+                console.error("Jag råka bränna maten, det blir inget idag!:", error);
+                
+            }
+        }
+
+        followRecipe(); */
+
+        // Skapa en funktion readBook(bookTitle) som bygger på ett Promise. Om boken är "JavaScript: The Good Parts", ska det godkännas med "Great choice!". Om boken är något annat, ska det avvisas med "Maybe try a different book?". Använd setTimeout för att simulera lästiden på 2 sekunder.
 
     
 
