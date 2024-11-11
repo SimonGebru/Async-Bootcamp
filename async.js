@@ -112,7 +112,7 @@ letsDance('polka')
                 console.log(await sketchDesign());
                 console.log(await createMockUp());
                 console.log(await codeProject());
-                console.log(await stackoverflowErrors());
+                console.log(await stckoverflowErrors());
                 console.log(await testProduct());
                 console.log(await celebrateProject());
             } catch (error) {
